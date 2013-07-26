@@ -3,7 +3,7 @@ require 'date'
 require 'bootstrap'
 
 get '/' do
-  @post = get_nigma(url, key)
+  @post = href
   erb :index
 end
 
@@ -19,10 +19,13 @@ post '/' do
 end
 
 def get_nigma(url, key)
-  href_link = ""
   nigma_link = "http://nigmaru.com/hl/highlight.php?url=#{url}&code=ba8ba8&s=#{key}"
-  href_link << "<a href=\"#{nigma_link}\">#{key}</a>"
-  href_link
 end
+
+def href
+  href_link = ""
+  href_link << "<a href=\"#{get_nigma}\">#{url} #{key}</a>"
+  end
+
 
 
