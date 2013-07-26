@@ -10,9 +10,6 @@ end
 post '/' do 
   url = params[:url]
   key = params[:key]
-    if url != nil && url.empty? != true && 
-      key != nil && key.empty? != true
-    end
   get_nigma url, key
   erb :index
   # redirect to '/'
