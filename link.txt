@@ -1,0 +1,6 @@
+name: http://sity.by/index.php?cat=1
+content: телевизор
+name: http://sity.by/index.php?cat=1
+content: телевизор
+name: http://sity.by/index.php?cat=1
+content: телевизор

@@ -7,13 +7,12 @@
   	<script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     <div class="container">
-  	<h1><%= @post %></h1><br />
-  	<%= params %>
+  	<strong><%= @post %></strong><br />
       <form action="/" method="post"> 
         <label>Ссылка на страницу</label>
-        <input type="text" name="url_1" ><br />
+        <input type="text" name="url" required=true ><br />
         <label>Ключевое слово:</label>
-        <input type="text" name="key" ><br />
+        <input type="text" name="key" required=true ><br />
         <input class="btn btn-primary" type="submit" >
       </form>
   </div>
