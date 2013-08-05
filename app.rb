@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'date'
 require 'bootstrap'
+require 'debugger'
 
 get '/' do
   @post = href
@@ -8,20 +9,21 @@ get '/' do
 end
 
 post '/' do 
-  url = params[:url]
-  key = params[:key]
-  get_nigma url, key
+  @url = params[:url_1]
+  @key = params[:key]
+  @nigma_link = get_nigma(url_1, key)
   erb :index
   # redirect to '/'
 end
 
-def get_nigma(url, key)
-  nigma_link = "http://nigmaru.com/hl/highlight.php?url=#{url}&code=ba8ba8&s=#{key}"
+def get_nigma(url_1, key)
+  nigma_link = "http://nigmaru.com/hl/highlight.php?url=#{url_1}&code=ba8ba8&s=#{key}"
+  nigma_link
 end
 
 def href
   href_link = ""
-  href_link << "<a href=\"#{get_nigma}\">#{url} #{key}</a>"
+  href_link << "<a href=\"#{@nigma_link}\">#{@url_1} #{@key}</a>"
   end
 
 
